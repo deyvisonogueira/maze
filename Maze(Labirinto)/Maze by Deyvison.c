@@ -69,15 +69,15 @@ void mostraLabirinto(char mat[MAX][MAX],int linha,int col){
 			i--;
 		}
 		else 
-			if(!isEmpty(p1)){
+		if(!isEmpty(p1)){
 			lab[i][j] = 'x';
 			pos = pop(&p1);
-			pos.i = i;
-			pos.j = j;
+			i = pos.i;
+			j = pos.j;
 			}
 		else 
-		printf("Impossivel encontrar o queijo, que fomeee! :'( )");
-        Sleep(300);
+			printf("Impossivel encontrar o queijo, que fomeee! :'( )");
+        Sleep(180);
         system("cls");
         mostraLabirinto(lab, MAX,MAX); 
      } while(lab[i][j]!='Q');
