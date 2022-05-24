@@ -43,7 +43,7 @@ void mostraLabirinto(char mat[MAX][MAX],int linha,int col){
      inicializa (&p1);
      tdado pos;
      do{
-        lab[i][j] = 'v'; 
+        lab[i][j] = 'M'; 
         if(lab[i][j+1]=='.' || lab[i][j+1]=='Q') {
             pos.i = i;
 			pos.j = j;
@@ -72,8 +72,8 @@ void mostraLabirinto(char mat[MAX][MAX],int linha,int col){
 			if(!isEmpty(p1)){
 			lab[i][j] = 'x';
 			pos = pop(&p1);
-			i = pos.i;
-			j = pos.j;
+			pos.i = i;
+			pos.j = j;
 			}
 		else 
 		printf("Impossivel encontrar o queijo, que fomeee! :'( )");
